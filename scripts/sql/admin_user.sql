@@ -1,0 +1,2 @@
+CREATE ROLE admin LOGIN PASSWORD 'adminpassword' SUPERUSER;
+CREATE DATABASE admin OWNER = admin;
