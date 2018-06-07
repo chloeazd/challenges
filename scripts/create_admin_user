@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo -u postgres psql -f admin_user.sql
+sudo -u postgres psql -f ./sql/admin_user.sql

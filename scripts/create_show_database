@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo -u postgres psql -f showdatabase.sql
+sudo -u postgres psql -f ./sql/showdatabase.sql

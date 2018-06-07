@@ -1,0 +1,36 @@
+#!/bin/bash
+echo "execution du script creation user"
+
+sudo -u postgres psql -f ./sql/admin_user.sql
+
+echo "execution du script configuration"
+sudo -u postgres psql -f ./sql/configuration.sql
+
+
+echo "suppression database et table si existant"
+ 
+'DROP DATABASE shows'
+
+-c "CREATE DATABASE shows 
+
+WITH OWNER=admin"
+
+echo "execution du script creation database et des tables"
+psql admin -d shows -f ./sql/showdatabase.sql
+
+echo "execution du script chargement donnees"
+psql admin -d shows -f ./sql/loadshowdata.sql
+
+echo "execution du script crypte du mot de passe"
+psql admin -d shows -f ./sql/cryptpassword.sql
+
+echo "execution du script creation des roles"
+psql admin -d shows -f ./sql/role.sql
+
+echo "execution du script creation de la database ynov"
+psql admin -d shows -f ./slq/novdatabase.sql
+
+echo "execution du script backup"
+psql admin -d shows -f ./sql/backup.sql
+
+echo "fin du script"

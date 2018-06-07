@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo -u postgres psql -f loadshowdata.sql
+sudo -u postgres psql -f ./sql/loadshowdata.sql

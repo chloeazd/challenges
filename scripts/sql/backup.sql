@@ -1,0 +1,1 @@
+COPY users(user_id,registration_date,firstname,lastname,email,password) TO '/mnt/c/workspace/mysql/scripts/csv/user.csv' DELIMITER ',' CSV HEADER;

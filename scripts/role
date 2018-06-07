@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo -u postgres psql -f role.sql
+sudo -u postgres psql -f ./sql/role.sql

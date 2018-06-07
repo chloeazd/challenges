@@ -1,2 +1,2 @@
-/bash
-sudo -u postgres psql -f checkreadonly.sql
+#! bin/bash
+sudo -u postgres psql -f ./sql/checkreadonly.sql

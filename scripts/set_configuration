@@ -1,3 +1,3 @@
-#! /bin/bash
+#!/bin/bash
 
-SELECT to_timestamp( '04/06/2018_a_17:40:00', 'DD/MM/YYYY_a_HH24:MI:SS' )::timestamp without time zone;
+sudo -u postgres psql -f ./sql/configuration.sql
